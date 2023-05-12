@@ -5507,7 +5507,7 @@ textarea.form-control-lg {
   transform: none;
 }
 .modal.modal-static .modal-dialog {
-  transform: scale(1.02);
+  transform: scale(1.0);
 }
 
 .modal-dialog-scrollable {
@@ -5522,16 +5522,17 @@ textarea.form-control-lg {
 }
 
 .modal-dialog-centered {
-  display: flex;
+  display: center;
   align-items: center;
   min-height: calc(100% - 1rem);
 }
 
 .modal-content {
+  margin-left: 25%;
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 50%;
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
@@ -6010,7 +6011,7 @@ textarea.form-control-lg {
   position: relative;
   display: none;
   float: left;
-  width: 100%;
+  width: 50%;
   margin-right: -100%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -11338,6 +11339,39 @@ html {
   color: #fff;
 }
 
+
+.divider-section {
+  margin: 1.25rem 0 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.divider-section .divider-section-line {
+  width: 100%;
+  max-width: 5rem;
+  height: 0.25rem;
+  background-color: #2c3e50;
+  border-radius: 1rem;
+  border-color: #2c3e50;
+}
+.divider-section .divider-section-line:first-child {
+  margin-right: 1rem;
+}
+.divider-section .divider-section-line:last-child {
+  margin-left: 1rem;
+}
+.divider-section .divider-section-icon {
+  color: #2c3e50;
+  font-size: 2rem;
+}
+.divider-section.divider-light .divider-section-line {
+  background-color: #fff;
+}
+.divider-section.divider-light .divider-section-icon {
+  color: #fff;
+}
+
 .btn-xl {
   padding: 1rem 1.75rem;
   font-size: 1.25rem;
@@ -11463,9 +11497,17 @@ html {
   position: relative;
   display: block;
   max-width: 25rem;
+  height: 10rem;
   border-radius: 0.5rem;
   overflow: hidden;
+  
 }
+.portfolio .portfolio-item img{
+  object-fit: cover;
+  width:100%;
+  height:100%;
+}
+
 .portfolio .portfolio-item .portfolio-item-caption {
   position: absolute;
   top: 0;
@@ -11487,13 +11529,13 @@ html {
   padding: 1rem;
 }
 .portfolio-modal .portfolio-modal-title {
-  font-size: 2.25rem;
-  line-height: 2rem;
+  font-size: 1.25rem;
+  line-height: 1rem;
 }
 @media (min-width: 992px) {
   .portfolio-modal .portfolio-modal-title {
-    font-size: 3rem;
-    line-height: 2.5rem;
+    font-size: 2rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -11506,4 +11548,8 @@ html {
 
 .copyright {
   background-color: #1a252f;
+}
+
+.prototype{
+  width: 100%;
 }
